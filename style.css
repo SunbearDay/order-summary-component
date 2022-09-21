@@ -13,7 +13,9 @@
 
   --color-very-pale-blue: hsl(225, 100%, 98%);
   --color-desaturated-blue: hsl(224, 23%, 55%);
-  --color-dark-bllue: hsl(223, 47%, 23%);
+  --color-dark-blue: hsl(223, 47%, 23%);
+
+  --color-white: hsl(0, 0%, 100%);
 }
 
 :is(*, *::before, *::after) {
@@ -32,9 +34,11 @@ body {
   background-color: var(--color-pale-blue);
   font-family: 'Red Hat Display', sans-serif;
   font-size: 100%;
+  font-weight: 500;
   line-height: 1.5;
   display: grid;
   place-items: center;
+  padding: 1em;
 }
 
 img {
@@ -43,8 +47,84 @@ img {
 }
 
 .card {
+  background-color: var(--color-white);
+  border-radius: 1em;
+  max-width: 375px;
+  overflow: hidden;
+}
+
+.card-main > h2 {
+  font-weight: 900;
+  margin-block: 1rem;
+  text-align: center;
+}
+
+.card-main > p {
+  color: var(--color-desaturated-blue);
+  margin-inline: auto;
+  max-width: 25ch;
+  text-align: center;
+}
+
+.annual-plan {
+  align-items: center;
   background-color: var(--color-very-pale-blue);
   border-radius: 1em;
-  overflow: hidden;
-  max-width: 375px;
+  display: flex;
+  gap: 1rem;
+  margin-block: 1rem;
+  margin-inline: auto;
+  max-width: 28ch;
+  padding: 1em;
+  width: 100%;
+}
+
+.annual-plan > div {
+  margin-right: auto;
+}
+
+.annual-plan p:first-child {
+  font-weight: 700;
+}
+
+.annual-plan p:last-child {
+  color: var(--color-desaturated-blue);
+}
+
+.annual-plan a {
+  color: var(--color-bright-blue);
+}
+
+.annual-plan a:hover {
+  text-decoration: none;
+}
+
+.card-actions {
+  display: grid;
+  padding-inline: 2.5em;
+  padding-bottom: 2em;
+  gap: 1em;
+}
+
+.card-actions button {
+  background-color: var(--color-bright-blue);
+  border: none;
+  border-radius: 0.5em;
+  color: var(--color-white);
+  font: inherit;
+  padding: 0.5em 1em;
+}
+
+.card-actions button:first-child:hover {
+  opacity: 0.8;
+}
+
+.card-actions button:last-child {
+  background-color: transparent;
+  color: var(--color-desaturated-blue);
+}
+
+.card-actions button:last-child:hover {
+  color: inherit;
+  font-weight: 700;
 }
