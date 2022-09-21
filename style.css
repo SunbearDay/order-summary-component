@@ -1,0 +1,50 @@
+/* style.css */
+
+/*  
+  Mobile: 375px
+  Desktop: 1440px
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap');
+
+:root {
+  --color-pale-blue: hsl(225, 100%, 94%);
+  --color-bright-blue: hsl(245, 75%, 52%);
+
+  --color-very-pale-blue: hsl(225, 100%, 98%);
+  --color-desaturated-blue: hsl(224, 23%, 55%);
+  --color-dark-bllue: hsl(223, 47%, 23%);
+}
+
+:is(*, *::before, *::after) {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+:is(html, body) {
+  height: 100%;
+}
+
+body {
+  background-color: var(--color-pale-blue);
+  font-family: 'Red Hat Display', sans-serif;
+  font-size: 100%;
+  line-height: 1.5;
+  display: grid;
+  place-items: center;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.card {
+  background-color: var(--color-very-pale-blue);
+  border-radius: 1em;
+  overflow: hidden;
+  max-width: 375px;
+}
